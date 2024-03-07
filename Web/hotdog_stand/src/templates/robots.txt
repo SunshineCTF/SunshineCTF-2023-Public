@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /configs/
+Disallow: /backups/
+Disallow: /hotdog-database/

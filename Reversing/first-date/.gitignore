@@ -1,0 +1,5 @@
+build/
+example/
+luadec/
+.nova/
+first-date.pdx

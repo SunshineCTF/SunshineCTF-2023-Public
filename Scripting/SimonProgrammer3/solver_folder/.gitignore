@@ -1,0 +1,3 @@
+# as the dockerfile is optional, adding a gitignore in case folks run the script in the current directory
+*.wav
+cookie.txt

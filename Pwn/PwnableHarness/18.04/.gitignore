@@ -1,0 +1,50 @@
+# Ignore all top-level items by default
+/*
+
+# Do NOT ignore the top-level examples directory
+!/examples/
+
+# Ignore the contents of each example directory
+/examples/*/*
+
+
+##################
+# Do NOT ignore: #
+##################
+
+# All C/C++ source files and text files
+!*.c
+!*.cpp
+!*.h
+!*.txt
+!*.md
+
+# (...but REALLY ignore real flags and debug histories)
+real_flag*.txt
+peda-session-*.txt
+
+# All Makefiles except Config.mk
+!Makefile
+!*.mk
+Config.mk
+
+# All gitignore files
+!.gitignore
+
+# Dockerfiles, including the top-level builder.Dockerfile
+!Dockerfile
+!/builder.Dockerfile
+
+# YAML files (including docker-compose.yml)
+!*.yml
+!*.yaml
+
+# Scripts (including builder-entrypoint.sh)
+!*.sh
+!/bin
+
+# Workdir directories
+!workdir/
+
+# Any other filetypes that should be allowed should
+# be added here or in another .gitignore file.

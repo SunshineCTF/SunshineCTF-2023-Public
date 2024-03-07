@@ -1,0 +1,6 @@
+PUBLISH := sunshine
+DOCKER_IMAGE := array-of-sunshine
+DOCKER_CHALLENGE_NAME := sunshine
+DOCKER_CHALLENGE_PATH := $(DIR)/sunshine
+DOCKER_PORTS := 23003
+DOCKER_TIMELIMIT := 30

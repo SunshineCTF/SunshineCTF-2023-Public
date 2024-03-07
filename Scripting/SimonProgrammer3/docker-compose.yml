@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  simon-programmer-3:
+    build: ./src
+    ports:
+    - "127.0.0.1:5002:5002"
+  solver:
+    build: ./solver_folder
+    command: http://simon-programmer-3:5002
