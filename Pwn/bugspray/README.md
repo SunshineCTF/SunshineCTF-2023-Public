@@ -2,4 +2,4 @@
 
 See https://github.com/tj-oconnor/sunshine_ctf/tree/main/bugspray for the original sources.
 
-For deployment during SunshineCTF 2023, we used a hacky/modified version of PwnableHarness that changed the base Docker image to Ubuntu 22.04. See [this issue](https://github.com/C0deH4cker/PwnableHarness/issues/10) for why we couldn't just use the current standard version of PwnableHarness for this. To deploy this challenge, this directory should be copied into `PwnableHarness/22.04/bugspray`. Then, `make docker-start` will build the docker image for this challenge and start up the container for it (and `make publish` will copy the distributable files to the `publish` subdirectory there).
+This challenge is built and deployed with stock PwnableHarness (`pwnmake`), which now supports selecting the Ubuntu base image via `UBUNTU_VERSION` in `Build.mk` (Ubuntu 22.04 for this challenge). Run `pwnmake docker-start` to build and start the container, and `pwnmake publish` to copy the distributable files to the `publish` folder at the repo root.

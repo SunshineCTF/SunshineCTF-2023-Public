@@ -7,20 +7,17 @@ A fun pwn challenge
 
 ## Deployment
 
-I use custom libc and ld linker file, so run on system: `patchelf house_of_sus --set-interpreter ld-linux-x86-64.so.2 --set-rpath ./`
-
-## Deployment for SunshineCTF 2023
-
-For SunshineCTF 2023, this challenge was deployed in a hacky/nonstandard way. It must be run on Ubuntu 18.04. Therefore, this directory should be copied to `PwnableHarness/18.04/House_of_Sus`, where it can then be deployed using `make docker-start` (and `make publish` will copy the files that should be shared with players to the `publish` subdirectory there).
-
-## Solution
-
-A solver script, `house_of_sus_exp.py`, is included that solves the PWN challenge in Python3:
-
-```
-python3 house_of_sus_exp.py
-```
+Built from source and deployed with stock PwnableHarness (`pwnmake`). It must run
+on Ubuntu 18.04 (glibc 2.27), selected via `UBUNTU_VERSION := 18.04` in `Build.mk`.
+Because PwnableHarness compiles the binary, it links in the `stdio_unbuffer.c`
+constructor automatically (so stdout is unbuffered over the socket with no
+LD_PRELOAD/`--inject`), and the binary uses the standard interpreter and the base
+image's glibc directly (no shipped ld/libc or custom Dockerfile needed). Run
+`pwnmake docker-start` to build and run it, and `pwnmake publish` to publish the
+player files (binary + the exact libc/ld).
 
 ## Thanks
 * Thanks to my friend knittingirl for developing the solution script
 * Thanks to my friend Milo Gilad for helping me come up with the theme and idea
+
+See [writeup.md](writeup.md) for the solution.

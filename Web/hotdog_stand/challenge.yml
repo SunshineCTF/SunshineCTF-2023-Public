@@ -1,0 +1,19 @@
+version: "0.1"
+name: "Hotdog Stand"
+author: "jck"
+category: Web
+description: |-
+  In the not-so-distant future, robots have taken over the fast-food industry. Infiltrate the robot hotdog stand to find out what jobs still remain.
+attribution: "Written by jck for [SunshineCTF 2023](https://ctftime.org/event/2079)"
+type: standard
+value: 50
+connection_info: "https://hotdog-stand.ctf.hackucf.org"
+flags:
+  - "sun{5l1c3d_p1cKl35_4nd_0N10N2}"
+tags:
+  - "sunshinectf-2023"
+  - "beginner"
+solution:
+  path: writeup.md
+  state: hidden
+state: visible

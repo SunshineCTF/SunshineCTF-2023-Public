@@ -1,0 +1,23 @@
+version: "0.1"
+name: "Dill"
+author: "Helithumper"
+category: Reversing
+description: |-
+  # Dill
+
+  Originally this was going to be about pickles, but `.pyc` sounds close enough
+  to "pickles" so I decided to make it about that instead.
+
+  * [dill.cpython-38.pyc](/files/sun/23/Reversing/Dill/dill.cpython-38.pyc)
+attribution: "Written by Helithumper for [SunshineCTF 2023](https://ctftime.org/event/2079)"
+type: standard
+value: 75
+flags:
+  - "sun{ZGlsbGxpa2V0aGVwaWNrbGVnZXRpdD8K}"
+tags:
+  - "sunshinectf-2023"
+  - "beginner"
+solution:
+  path: writeup.md
+  state: hidden
+state: visible

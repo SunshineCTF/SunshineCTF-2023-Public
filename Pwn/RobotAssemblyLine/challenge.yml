@@ -1,0 +1,22 @@
+version: "0.1"
+name: "Robot Assembly Line"
+author: "kcolley"
+category: Pwn
+description: |-
+  We found the robotic turret assembly line control station! Can you break in
+  to corrupt all of the robot turrets that are being manufactured?
+
+  * [robots-assemble](/files/sun/23/Pwn/RobotAssemblyLine/robots-assemble)
+attribution: "Written by kcolley for [SunshineCTF 2023](https://ctftime.org/event/2079)"
+type: standard
+value: 400
+connection_info: "nc ctf.hackucf.org 23000"
+flags:
+  - "sun{t4rg3t_l0s7_4r3_y0u_st1ll_th3r3?}"
+tags:
+  - "sunshinectf-2023"
+  - "expert"
+solution:
+  path: writeup.md
+  state: hidden
+state: visible

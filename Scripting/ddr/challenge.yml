@@ -1,0 +1,19 @@
+version: "0.1"
+name: "DDR"
+author: "shuga__"
+category: Scripting
+description: |-
+  All the cool robots are playing Digital Dance Robots, a new rythmn game that... has absolutely no sound! Robots are just *that good* at these games... until they crash because they can't count to 256. Can you beat the high score and earn a prize?
+attribution: "Written by shuga__ for [SunshineCTF 2023](https://ctftime.org/event/2079)"
+type: standard
+value: 75
+connection_info: "nc ctf.hackucf.org 23200"
+flags:
+  - "sun{d0_r0b0t5_kn0w_h0w_t0_d4nc3}"
+tags:
+  - "sunshinectf-2023"
+  - "beginner"
+solution:
+  path: writeup.md
+  state: hidden
+state: visible

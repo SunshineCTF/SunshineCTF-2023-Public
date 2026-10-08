@@ -1,8 +1,13 @@
 # ctf-hotdogstand
 
+Easy web challenge (Flask app in `src/`).
 
-The path to victory:
+## Deploy
 
-user opens page -> sees login. -> robots.txt -> hotdog-database -> parse sql -> login as admin, get flag
+Deployed with the [docker-compose.yml](docker-compose.yml) in this folder (port 23301). `solver.py` is the solver used for sanity checking.
 
-Perhaps throw in a more complex step, or keep it easy. quick n ez
+## Files for players
+
+None; players only get the URL.
+
+See [writeup.md](writeup.md) for the solution.

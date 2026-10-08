@@ -1,4 +1,4 @@
-FROM ubuntu:23.10
+FROM ubuntu:24.04
 WORKDIR /opt/chal
 
 RUN apt-get update && apt-get install -y aubio-tools jq curl coreutils gawk sed

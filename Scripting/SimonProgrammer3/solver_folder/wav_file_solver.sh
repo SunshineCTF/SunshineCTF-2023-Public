@@ -3,7 +3,9 @@ set -eo pipefail
 
 # why not just use a python script? cause I'm being lazy right now, and this works :D
 
-DOMAIN=$1
+# $URL is set by `pwnmake check` (http://localhost:23203 locally); fall back to a
+# command-line argument or the local dev default.
+DOMAIN=${URL:-$1}
 if [ -z "$DOMAIN" ]; then
     DOMAIN="http://127.0.0.1:5002"
 fi
@@ -87,5 +89,6 @@ while true; do
     date --iso-8601=seconds
     echo "✔️  challenges still up, detected $CHALLENGE_FLAG"
 
-    sleep "$TIMEOUT"
+    # One successful solve is enough for `pwnmake check`; exit instead of polling.
+    exit 0
 done

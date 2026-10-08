@@ -1,3 +1,4 @@
+#!/bin/bash
 compilerPath='$(which pdc)'
 # simulatorPath="~/Developer/PlaydateSDK/bin/Playdate\ Simulator.app/Contents/MacOS/PlaydateSimulator"
 PLAYDATE_SDK_PATH='~/Developer/PlaydateSDK'

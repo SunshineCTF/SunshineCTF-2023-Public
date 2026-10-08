@@ -3,9 +3,15 @@ import json
 import sys
 import time
 
+import os
+
 import requests
 
-if len(sys.argv) == 1:
+# $URL is set by `pwnmake check` (http://localhost:23201 locally); fall back to a
+# command-line argument or the local dev default.
+if os.environ.get("URL"):
+    DOMAIN = os.environ["URL"]
+elif len(sys.argv) == 1:
     DOMAIN = "http://127.0.0.1:5000"
 else:
     DOMAIN = sys.argv[1]

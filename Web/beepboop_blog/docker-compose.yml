@@ -1,7 +1,10 @@
-version: '3'
-
+name: sun23-beepboop-blog
 services:
   chal:
     build: ./src
+    restart: unless-stopped
     ports:
-    - "127.0.0.1:8000:8000"
+      - "127.0.0.1:23300:8000"
+    mem_limit: 512m
+    cpus: 1.0
+    pids_limit: 512

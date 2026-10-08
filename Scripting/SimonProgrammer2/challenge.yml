@@ -1,0 +1,58 @@
+version: "0.1"
+name: "Simon Programmer 2"
+author: "solarbonite"
+category: Scripting
+description: |-
+  # SimonProgrammer 2: The Next Octave
+  ## Bandwidth notice:
+  *Please only download the audio you need to complete the challenge. You can use the audio files from Simon Programmer 1 to calibrate your solver, if required. Thanks! - CTF Organizers*
+
+  ## Music to my ears!
+
+  Ok, ok. Yeah. That was a mistake.
+
+  An intentional mistake *laughs in evil genius*.
+
+  I... uh... ***intended*** to... uh...
+
+  ...
+
+  I patched it now! And now uh... the old way of doing the challenge seems broken... uh...
+
+  ...
+
+  Ok, ok. We'll say the previous challenge was so folks could calibrate... automated solvers... cause...
+
+  The robots are taking our jobs writing articles about the robots taking our jobs!
+
+  Now, automation is the name of the game, and Simon Says... automate!
+
+  As Mr. Schmitt says, there are a whole lot of techniques to answer back with a pitch, but his is the best!
+
+  Visit `http://ctf.hackucf.org:23202`, and play a game of listening to the present!
+
+  But don't worry that this game will get old! The flags in this game are split into three octaves, with one flag in each... you'll never find them all! And since it's random, no two games will ever be alike!
+
+  Flag will be given by our backend in the standard `sun{}` format!
+
+  ## Notes
+
+  I am not unreasonable.
+
+  All I ask is you listen to the music with 99.9% accuracy.
+
+  That's better than last year, which required 100% accuracy! Much better.
+attribution: "Written by solarbonite for [SunshineCTF 2023](https://ctftime.org/event/2079)"
+type: standard
+value: 75
+connection_info: "http://ctf.hackucf.org:23202"
+flags:
+  - "sun{simon_says_wait_that_was_a_mistake_what_do_you_mean_the_filenames_were_frequencies}"
+tags:
+  - "sunshinectf-2023"
+  - "beginner"
+solution:
+  path: writeup.md
+  state: hidden
+next: "Simon Programmer 3"
+state: visible

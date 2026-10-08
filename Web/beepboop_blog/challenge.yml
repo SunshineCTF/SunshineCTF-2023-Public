@@ -1,0 +1,19 @@
+version: "0.1"
+name: "BeepBoop Blog"
+author: "Oreomeister"
+category: Web
+description: |-
+  A few robots got together and started a blog! It's full of posts that make absolutely no sense, but a little birdie told me that one of them left a secret in their drafts. Can you find it?
+attribution: "Written by Oreomeister for [SunshineCTF 2023](https://ctftime.org/event/2079)"
+type: standard
+value: 50
+connection_info: "https://beepboop-blog.ctf.hackucf.org"
+flags:
+  - "sun{wh00ps_4ll_IDOR}"
+tags:
+  - "sunshinectf-2023"
+  - "beginner"
+solution:
+  path: writeup.md
+  state: hidden
+state: visible

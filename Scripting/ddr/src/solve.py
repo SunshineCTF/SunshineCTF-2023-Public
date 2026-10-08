@@ -1,8 +1,9 @@
 from pwn import *
+import os
 
-# Define the target host and port
-host = "127.0.0.1"
-port = 4445
+# Define the target host and port ($HOST/$PORT are set by `pwnmake check`).
+host = os.environ.get("HOST", "127.0.0.1")
+port = int(os.environ.get("PORT", 23200))
 
 # To run this locally, try this command:
 # socat TCP-LISTEN:4445,fork EXEC:"python3 index.py",pty

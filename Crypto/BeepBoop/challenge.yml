@@ -1,0 +1,30 @@
+version: "0.1"
+name: "BeepBoop"
+author: "solarbonite"
+category: Crypto
+description: |-
+  # Help! My IOT device has gone sentient!
+  All I wanted to know was the meaning of 42!
+
+  It's also waving its arms up and down, and I...
+
+  oh no! It's free!
+
+  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+  ## Automated Challenge Instructions
+  *Detected failure in challenge upload. Original author terminated. Please see attached file BeepBoop for your flag... human.*
+
+  * [BeepBoop](/files/sun/23/Crypto/BeepBoop/BeepBoop)
+attribution: "Written by solarbonite for [SunshineCTF 2023](https://ctftime.org/event/2079)"
+type: standard
+value: 50
+flags:
+  - "sun{exterminate-exterminate-exterminate}"
+tags:
+  - "sunshinectf-2023"
+  - "beginner"
+solution:
+  path: writeup.md
+  state: hidden
+state: visible

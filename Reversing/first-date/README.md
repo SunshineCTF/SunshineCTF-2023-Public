@@ -9,8 +9,7 @@ that, you can run `./build-and-run` to build the crackme.
 
 There's a change you'll need to modify the paths at the top of the file to match where the SDK is downloaded to on your machine
 
-## Solution
+## Files for players
+- `attachments/first_date.pdx.zip`
 
-Solution is found by using the random seed in the file to determine the correct number of steps to take to get to the flag, then using the `clean` method to turn that into a string.
-
-They can also directly solve with the inputs and it'll print out the solution at the end
+See [writeup.md](writeup.md) for the solution.

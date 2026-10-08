@@ -1,10 +1,10 @@
-version: '3'
-
+name: sun23-simon-programmer-3
 services:
   simon-programmer-3:
     build: ./src
+    restart: unless-stopped
     ports:
-    - "127.0.0.1:5002:5002"
-  solver:
-    build: ./solver_folder
-    command: http://simon-programmer-3:5002
+      - "23203:5002"
+    mem_limit: 512m
+    cpus: 1.0
+    pids_limit: 512

@@ -1,6 +1,10 @@
 import requests
 
-DOMAIN = "http://127.0.0.1:8000"
+import os
+import sys
+# $URL is set by `pwnmake check` (http://localhost:23300 locally); fall back to a
+# command-line argument or the local dev default.
+DOMAIN = os.environ.get("URL") or (sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:23300")
 
 req = requests.get(f"{DOMAIN}/posts")
 posts = req.json().get("posts")

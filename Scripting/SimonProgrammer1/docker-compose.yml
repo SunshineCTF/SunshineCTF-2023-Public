@@ -1,7 +1,10 @@
-version: '3'
-
+name: sun23-simon-programmer-1
 services:
   simon-programmer-1:
     build: ./src
+    restart: unless-stopped
     ports:
-    - "127.0.0.1:5000:5000"
+      - "23201:5000"
+    mem_limit: 512m
+    cpus: 1.0
+    pids_limit: 512

@@ -1,0 +1,26 @@
+version: "0.1"
+name: "First Date"
+author: "Helithumper"
+category: Reversing
+description: |-
+  # First Date
+
+  I'm Excited, this is my first date in years but this time it's with a PlayDate!
+
+  Sadly I'm locked out of it so if you could help me get in that would be great!
+
+  Flag Note: `__` -> `_`
+
+  * [first_date.pdx.zip](/files/sun/23/Reversing/first-date/first_date.pdx.zip)
+attribution: "Written by Helithumper for [SunshineCTF 2023](https://ctftime.org/event/2079)"
+type: standard
+value: 100
+flags:
+  - "sun{MIEANBLVFPZJTDOA}"
+tags:
+  - "sunshinectf-2023"
+  - "beginner"
+solution:
+  path: writeup.md
+  state: hidden
+state: visible

@@ -17,7 +17,7 @@ def index():
 
 @app.route('/hotdog-database/')
 def secret_interface():
-    return send_from_directory(directory='hotdog-database', filename='robot_data.db')
+    return send_from_directory(directory='hotdog-database', path='robot_data.db')
 
 
 @app.route('/login', methods=['GET', 'POST'])

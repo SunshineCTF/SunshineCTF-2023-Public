@@ -1,0 +1,27 @@
+version: "0.1"
+name: "Array of Sunshine"
+author: "tj_oconnor"
+category: Pwn
+description: |-
+  # Sunshine on my shoulders makes me happy...
+  ## Haiku to Sunshine - ChatGPT
+  ☀️ A sunbeam kisses 🍊
+
+  Golden warmth in every slice 🌞
+
+  Nature's sweet embrace 🌼
+
+  * [sunshine](/files/sun/23/Pwn/array_of_sunshine/sunshine)
+attribution: "Written by tj_oconnor for [SunshineCTF 2023](https://ctftime.org/event/2079)"
+type: standard
+value: 125
+connection_info: "nc ctf.hackucf.org 23003"
+flags:
+  - "sun{a_ray_of_sunshine_bouncing_around}"
+tags:
+  - "sunshinectf-2023"
+  - "intermediate"
+solution:
+  path: writeup.md
+  state: hidden
+state: visible

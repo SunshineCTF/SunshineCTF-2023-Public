@@ -1,2 +1,5 @@
 pycdc/*
 venv/*
+
+# The compiled handout (built by compile.sh/build.sh with Python 3.8)
+!attachments/*.pyc
