@@ -4,7 +4,7 @@ services:
     build: ./src
     restart: unless-stopped
     ports:
-      - "23203:5002"
+      - "127.0.0.1:23203:5002"
     mem_limit: 512m
     cpus: 1.0
     pids_limit: 512

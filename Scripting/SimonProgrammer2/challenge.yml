@@ -29,7 +29,7 @@ description: |-
 
   As Mr. Schmitt says, there are a whole lot of techniques to answer back with a pitch, but his is the best!
 
-  Visit `http://ctf.hackucf.org:23202`, and play a game of listening to the present!
+  Visit `https://simon-programmer-2.ctf.hackucf.org`, and play a game of listening to the present!
 
   But don't worry that this game will get old! The flags in this game are split into three octaves, with one flag in each... you'll never find them all! And since it's random, no two games will ever be alike!
 
@@ -45,7 +45,7 @@ description: |-
 attribution: "Written by solarbonite for [SunshineCTF 2023](https://ctftime.org/event/2079)"
 type: standard
 value: 75
-connection_info: "http://ctf.hackucf.org:23202"
+connection_info: "https://simon-programmer-2.ctf.hackucf.org"
 flags:
   - "sun{simon_says_wait_that_was_a_mistake_what_do_you_mean_the_filenames_were_frequencies}"
 tags:

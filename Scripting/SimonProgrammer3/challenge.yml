@@ -31,7 +31,7 @@ description: |-
 
   *robots have taken over this challenge*
 
-  *Visit `http://ctf.hackucf.org:23203`, if you dare, human!*
+  *Visit `https://simon-programmer-3.ctf.hackucf.org`, if you dare, human!*
 
   But don't worry that this game will get old! The flags in this game are split into three octaves, with one flag in each... you'll never find them all! And since it's random, no two games will ever be alike!
 
@@ -47,7 +47,7 @@ description: |-
 attribution: "Written by solarbonite for [SunshineCTF 2023](https://ctftime.org/event/2079)"
 type: standard
 value: 175
-connection_info: "http://ctf.hackucf.org:23203"
+connection_info: "https://simon-programmer-3.ctf.hackucf.org"
 flags:
   - "sun{simon_says_automated_solve_or_bust}"
 tags:

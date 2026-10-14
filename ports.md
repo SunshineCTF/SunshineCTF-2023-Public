@@ -21,9 +21,9 @@ raw-TCP / port-based challenges are reached with `nc ctf.hackucf.org <port>`
 | Array of Sunshine | Pwn | tj_oconnor | Pwn/array_of_sunshine | ctf.hackucf.org | 23003 | `nc ctf.hackucf.org 23003` |
 | Bugspray | Pwn | tj_oconnor | Pwn/bugspray | ctf.hackucf.org | 23004 | `nc ctf.hackucf.org 23004` |
 | DDR | Scripting | shuga__ | Scripting/ddr | ctf.hackucf.org | 23200 | `nc ctf.hackucf.org 23200` |
-| Simon Programmer 1 | Scripting | solarbonite | Scripting/SimonProgrammer1 | ctf.hackucf.org | 23201 | http://ctf.hackucf.org:23201 |
-| Simon Programmer 2 | Scripting | solarbonite | Scripting/SimonProgrammer2 | ctf.hackucf.org | 23202 | http://ctf.hackucf.org:23202 |
-| Simon Programmer 3 | Scripting | solarbonite | Scripting/SimonProgrammer3 | ctf.hackucf.org | 23203 | http://ctf.hackucf.org:23203 |
+| Simon Programmer 1 | Scripting | solarbonite | Scripting/SimonProgrammer1 | simon-programmer-1.ctf.hackucf.org | 23201 | https://simon-programmer-1.ctf.hackucf.org |
+| Simon Programmer 2 | Scripting | solarbonite | Scripting/SimonProgrammer2 | simon-programmer-2.ctf.hackucf.org | 23202 | https://simon-programmer-2.ctf.hackucf.org |
+| Simon Programmer 3 | Scripting | solarbonite | Scripting/SimonProgrammer3 | simon-programmer-3.ctf.hackucf.org | 23203 | https://simon-programmer-3.ctf.hackucf.org |
 | BeepBoop Blog | Web | Oreomeister | Web/beepboop_blog | beepboop-blog.ctf.hackucf.org | 23300 | https://beepboop-blog.ctf.hackucf.org |
 | Hotdog Stand | Web | jck | Web/hotdog_stand | hotdog-stand.ctf.hackucf.org | 23301 | https://hotdog-stand.ctf.hackucf.org |
 

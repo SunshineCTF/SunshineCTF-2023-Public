@@ -1,5 +1,6 @@
-# SimonProgrammer 3 is a docker-compose challenge (Flask app speaking HTTP over
-# its raw TCP port). No PwnableHarness TARGET; this only registers the check.
+# SimonProgrammer 3 is a docker-compose web challenge (Flask app) served
+# behind the reverse proxy at its subdomain. No PwnableHarness TARGET; this
+# only registers the check.
 #
 # The original solver (solver_folder/wav_file_solver.sh) needs aubio-tools + jq +
 # curl, which are not installed in the `pwnmake check` image, so the registered
@@ -8,4 +9,4 @@
 #
 # `pwnmake check` starts it, runs the solver, and tears it down.
 CHECK_TIMEOUT := 400
-$(call ctf_check_tcp_slow,$(DIR),23203,python3 solver_folder/solver.py)
+$(call ctf_check_web_slow,$(DIR),23203,simon-programmer-3.ctf.hackucf.org,python3 solver_folder/solver.py)
